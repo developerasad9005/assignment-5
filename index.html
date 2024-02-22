@@ -1,11 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bus Ticket</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    
+    <div class="container mx-auto pt-8">
+        <header>
+            <div class="navbar bg-base-100 flex justify-center items-center">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                  </div>
+                  <h1 class="text-3xl font-bold">P-Ticket</h1>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a class="text-lg">Home</a></li>
+                    <li><a class="text-lg">About</a></li>
+                    <li><a class="text-lg">Destination</a></li>
+                    <li><a class="text-lg">Search</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="btn bg-[#1DD10066] flex justify-center items-center text-xl">Bus <img class="w-6 mt-1" src="images/bus-icon.png" alt=""></a>
+                </div>
+              </div>
+        </header>
+        <main>
+            <div class="relative mx-auto">
+                <div class="hero h-[750px] bg-center bg-no-repeat bg-cover rounded-2xl" style="background-image: url(images/banner.png); background-size: cover !important;">
+                    <!-- <div class="hero-overlay bg-opacity-60 w-full h-full py-20"></div> -->
+                    <div class="hero-content text-center text-neutral-content">
+                      <div>
+                        <h1 class="mb-5 text-6xl font-bold text-[#ffff]">End-to-End Travel with <br> <span class="text-[#1DD100] mt-5">P Paribahan</span> </h1>
+                        <p class="mb-5 text-lg text-white">Yes, you can run unit tests and view the results directly within the app. <br> The integrated testing features allow for a streamlined .</p>
+                        <button onclick="" class="btn bg-[#1DD100] outline-none rounded-lg border-0 text-black">Buy Tickets</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex gap-8 absolute bottom-[-70px] mx-auto justify-center items-center translate-x-[-50%] left-[50%] w-full">
+                    <div class="flex gap-3 bg-[#ffffff] p-8 rounded-xl border-b-4 border-[#1DD100]">
+                        <div>
+                            <img src="images/people.png" alt="">
+                        </div>
+                        <div>
+                            <h1 class="text-black text-3xl font-bold">50k</h1>
+                            <p class="text-[#686363]">Registered users</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 bg-[#ffffff] p-8 rounded-xl border-b-4 border-[#1DD100]">
+                        <div>
+                            <img src="images/people.png" alt="">
+                        </div>
+                        <div>
+                            <h1 class="text-black text-3xl font-bold">1.7 lacks</h1>
+                            <p class="text-[#686363]">Tickets sold</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 bg-[#ffffff] p-8 rounded-xl border-b-4 border-[#1DD100]">
+                        <div>
+                            <img src="images/people.png" alt="">
+                        </div>
+                        <div>
+                            <h1 class="text-black text-3xl font-bold">80K+</h1>
+                            <p class="text-[#686363]">Rental partners</p>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <section class="mt-40">
+                <div class="text-center">
+                    <h1 class="text-4xl">Best offers for you</h1>
+                </div>
+               <div class="flex mt-20 gap-10 justify-center">
+                <div class="bg-[#FFBF0F] px-8 rounded-xl flex justify-center items-center">
+                    <div>
+                        <h1 class="text-4xl text-black font-bold">15% OFF</h1>
+                        <p class="text-xl text-black font-bold">on your next purchase</p>
+                        <p class="text-sm text-[#333232]">use by January 2024</p>
+                    </div>
+                    <div class="h-[220px] px-20">
+                        <img class="w-full" src="images/cupon-devider.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-2xl text-black font-bold">NEW15</h1>
+                        <p class="text-xl text-[#333232]">Coupon Code</p>
+                    </div>
+                </div>
+                <div class="bg-[#F78C9C] px-8 rounded-xl flex justify-center items-center">
+                    <div>
+                        <h1 class="text-4xl text-black font-bold">20% OFF</h1>
+                        <p class="text-lg text-black font-bold">on your next purchase</p>
+                        <p class="text-sm text-[#333232]">use by January 2024</p>
+                    </div>
+                    <div class="h-[220px] px-20">
+                        <img class="w-full" src="images/cupon-devider.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-2xl text-black font-bold">Couple 20</h1>
+                        <p class="text-lg text-[#333232]">Coupon Code</p>
+                    </div>
+                </div>
+               </div>
+               <div class="text-center mt-20">
+                <button class="btn border-2 text-xl text-[#1DD100] border-[#1DD100] bg-[#ddd0] outline-none hover:bg-[#ddd0] ">See all Offer</button>
+               </div>
+            </section>
+        </main>
+    </div>
+    <section class="border-t-2 border-[#1DD100] rounded-t-full mt-20 bg-[#ddd] ">
+        <div class="container mx-auto">
+            <div class="text-center py-20">
+                <h1 class="text-4xl text-black font-bold mb-6">P.H Paribahan</h1>
+                <p class="text-xl text-[#333232]">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-black py-28 mt-20">
+        <div class="container mx-auto">
+                <div class="flex justify-between flex-col lg:flex-row">
+                    <div>
+                        <h1 class="text-3xl text-white font-bold mb-5">P-Ticket</h1>
+                        <p class="text-lg text-white">P-Ticket is a digital platform to make your <br> daily commuting better.</p>   
+                    </div>
+                    <div>
+                        <h1 class="text-xl text-white font-bold mb-5">Download our app</h1>
+                        <div class="border-2 border-[#ddd] p-5 flex gap-2 items-center rounded-xl">
+                            <div><img src="images/playstore.png" alt=""></div>
+                            <div>
+                                <p class="text-white">GET IT ON</p>
+                                <h1 class="text-white text-2xl">Google Play</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t-2 border-dashed border-[#727070] mt-10"></div>
+               <div class="flex justify-between mt-10 flex-col lg:flex-row">
+                <div>
+                    <div><p class="text-white" >@all rights reserved, P-Ticket services limited.2024</p></div>
+                </div>
+                <div>
+                    <ul class="flex gap-3 flex-col lg:flex-row">
+                        <li>
+                            <a class="text-white" href="#">Terms & condition</a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#">Return & refund policy</a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#">Privacy policy</a>
+                        </li>
+                    </ul>
+                </div>
+               </div>
+        </div>
+    </footer>
 </body>
+
 </html>
