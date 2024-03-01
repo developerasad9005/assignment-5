@@ -81,4 +81,34 @@ document.getElementById('apply').addEventListener('click', function(){
     }
 })
 
+    const grandtotalPrize = document.getElementById('grandTotalUpdate').innerText;
+    const userName = document.getElementById('userName');
+    const userEmaill = document.getElementById('userEmaill');
+    const userPhone = document.getElementById('userPhone');
+    const submitButton = document.getElementById('submitBtn');
+
+    userName.addEventListener('keyup', validateForm);
+    userPhone.addEventListener('keyup', validateForm);
+    userEmaill.addEventListener('keyup', validateForm);
+
+    function validateForm() {
+        const name = userName.value.trim();
+        const phone = userPhone.value.trim();
+        const email = userEmaill.value.trim();
+
+        const namePattern = /^[a-zA-Z\s]+$/;
+        const phonePattern = /^\d{11}$/;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        const nameValid = namePattern.test(name);
+        const phoneValid = phonePattern.test(phone);
+        const emailValid = emailPattern.test(email);
+
+        document.getElementById('nameError').textContent = nameValid ? '' : 'Invalid name';
+        document.getElementById('phoneError').textContent = phoneValid ? '' : 'Invalid phone(Please give 11 digit number)';
+        document.getElementById('emailError').textContent = emailValid ? '' : 'Invalid email(Add @ or valid gmail)';
+
+        submitButton.disabled = !(nameValid && phoneValid && emailValid);
+
+    }
 
