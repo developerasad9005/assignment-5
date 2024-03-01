@@ -279,14 +279,15 @@
                         <h1 class="text-xl font-bold">BDT <span id="totalPrizeUpdate">0</span></h1>
                     </div>
                    
-                        <div class="join flex justify-center mt-5">
-                            <input class="input border-none w-[400px] outline-none join-item" placeholder="Have any copupon?"/>
-                            <button class="btn join-item rounded-r-full bg-[#1DD100] text-white">Apply</button>
+                        <div id="couponHidden" class="join flex justify-center mt-5">
+                            <input id="collectCoupon" class="input border-none w-[400px] outline-none join-item" placeholder="Have any copupon?"/>
+                            <button id="apply" class="btn join-item rounded-r-full bg-[#1DD100] text-white" disabled>Apply</button>
                           </div>
                           <div class="flex justify-between mt-5">
                             <h1 class="text-xl font-bold">Grand Total</h1>
                             <h1 class="text-xl font-bold">BDT <span id="grandTotalUpdate">0</span></h1>
                         </div>
+                        <div id="discount" ></div>
                         <div class="w-full mt-5">
                              <div class="label">
                                   <span class="label-text text-lg text-black font-bold">Passenger Name*</span>
