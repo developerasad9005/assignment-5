@@ -11,6 +11,10 @@
         html{
             scroll-behavior: smooth;
         }
+        /* .checked:checked {
+            background-color: aqua !important;
+            color: white;
+        } */
     </style>
 </head>
 
@@ -156,7 +160,7 @@
                             </div>
                             <div class="w-[212px] text-center flex items-center gap-2 bg-[#1DD10026] p-5 rounded-xl">
                                 <img src="images/seat-green.png" alt="">
-                                <h1 class=" text-xl font-bold"><span>40</span> Seats left</h1>
+                                <h1 class=" text-xl font-bold"><span id="leftTicket">00</span> Seats left</h1>
                             </div>
                         </div>
                         <div id="ticket-counter" class=" mt-10 bg-[#F7F8F8] p-10 rounded-3xl">
@@ -217,24 +221,24 @@
                             <div class="flex flex-col gap-y-5">
                                 <div class="flex items-center gap-x-10 justify-center">
                                     <p class="text-xl font-bold">A</p>
-                                    <button class="btn px-12 by-5 text-xl">A1</button>
-                                    <button class="btn px-12 by-5 text-xl">A2</button>
+                                    <button class="btn px-12 by-5 text-xl ticket" id="A1" onclick="clickButton('A1')">A1</button>
+                                    <button class="btn px-12 by-5 text-xl ticket" id="A2" onclick="clickButton('A2')">A2</button>
                                 </div>
                                 <div class="flex items-center gap-x-10 justify-center">
                                     <p class="text-xl font-bold">B</p>
-                                    <button class="btn px-12 by-5 text-xl">B1</button>
-                                    <button class="btn px-12 by-5 text-xl">B2</button>
+                                    <button class="btn px-12 by-5 text-xl ticket" id="B1" onclick="clickButton('B1')">B1</button>
+                                    <button class="btn px-12 by-5 text-xl ticket" id="B2" onclick="clickButton('B2')">B2</button>
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-col gap-y-5">
                             <div class="flex items-center gap-x-10 justify-center">
-                                <button class="btn px-12 by-5 text-xl">A3</button>
-                                <button class="btn px-12 by-5 text-xl">A4</button>
+                                <button class="btn px-12 by-5 text-xl ticket" id="A3" onclick="clickButton('A3')">A3</button>
+                                <button class="btn px-12 by-5 text-xl ticket" id="A4" onclick="clickButton('A4')">A4</button>
                             </div>
                             <div class="flex items-center gap-x-10 justify-center">
-                                <button class="btn px-12 by-5 text-xl">B3</button>
-                                <button class="btn px-12 by-5 text-xl">B4</button>
+                                <button class="btn px-12 by-5 text-xl ticket" id="B3" onclick="clickButton('B3')">B3</button>
+                                <button class="btn px-12 by-5 text-xl ticket" id="B4" onclick="clickButton('B4')">B4</button>
                             </div>
                         </div>
                     </div>
@@ -246,21 +250,33 @@
                     <div class="flex justify-between p-8 bg-[#F7F8F8] w-[450px] rounded-2xl flex-col">
                       <div>
                         <div class="flex justify-between">
-                            <h1 class="text-xl font-bold">Seat <span class="bg-[#1DD100] text-white p-1 rounded-xl text-sm">0</span></h1>
+                            <h1 class="text-xl font-bold">Seat <span id="buyTicketCount" class="bg-[#1DD100] text-white p-1 rounded-xl text-sm">0</span></h1>
                             <h1 class="text-xl font-bold">Class</h1>
                             <h1 class="text-xl font-bold">Price</h1>
                         </div>
                         <!-- added this container -->
-                        <div class="flex justify-between mt-4">
-                            <h1 class="text-xl">C2</h1>
-                            <h1 class="text-xl">Economoy</h1>
-                            <h1 class="text-xl">550</h1>
+                        <div id="ticketlistContainer">
+                            <!-- <div class="flex justify-between mt-4">
+                                <h1 class="text-xl">C2</h1>
+                                <h1 class="text-xl">Economoy</h1>
+                                <h1 class="text-xl">550</h1>
+                            </div> 
+                            <div class="flex justify-between mt-4">
+                                <h1 class="text-xl">C2</h1>
+                                <h1 class="text-xl">Economoy</h1>
+                                <h1 class="text-xl">550</h1>
+                            </div>
+                            <div class="flex justify-between mt-4">
+                                <h1 class="text-xl">C2</h1>
+                                <h1 class="text-xl">Economoy</h1>
+                                <h1 class="text-xl">550</h1>
+                            </div> -->
                         </div>
                       </div>
                       <div class="border border-solid my-5 border-[#ddd] w-full"></div>
                       <div class="flex justify-between">
                         <h1 class="text-xl font-bold">Total Price</h1>
-                        <h1 class="text-xl font-bold">BDT <span>1100</span></h1>
+                        <h1 class="text-xl font-bold">BDT <span id="totalPrizeUpdate">0</span></h1>
                     </div>
                    
                         <div class="join flex justify-center mt-5">
@@ -268,8 +284,8 @@
                             <button class="btn join-item rounded-r-full bg-[#1DD100] text-white">Apply</button>
                           </div>
                           <div class="flex justify-between mt-5">
-                            <h1 class="text-xl font-bold">Total Price</h1>
-                            <h1 class="text-xl font-bold">BDT <span>1100</span></h1>
+                            <h1 class="text-xl font-bold">Grand Total</h1>
+                            <h1 class="text-xl font-bold">BDT <span id="grandTotalUpdate">0</span></h1>
                         </div>
                         <div class="w-full mt-5">
                              <div class="label">
@@ -342,6 +358,7 @@
             </div>
         </div>
     </footer>
+    <script src="app.js"></script>
 </body>
 
 </html>
